@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+          <div class="container">
+            <a href="#" class="brand-logo center">User Details</a>
+            <ul class="right">
+              <li><a href="#" class="clear-btn btn blue lighten-3">Clear All</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <br>
+    
+
+    <div class="container">
+     <div class="card">
+        <div class="card-content">
+        <span class="card-title">Add User Details</span>
+        <form class="col" id="user-details"onsubmit="event.preventDefault(); onFormSubmit();">
+           <p>Name</p>
+          <input type="text" placeholder="Full Name" id="full-name" >
+            <p>Email</p>
+            <input type="text" placeholder="Email-Id" id="email" >
+                <p>Please select your gender:</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="Male" id="Male" checked="checked">
+                    <label class="form-check-label" for="Male">
+                      Male
+                    </label></div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="Female" id="Female">
+                    <label class="form-check-label" for="Female">
+                      Female
+                    </label></div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="other" id="other">
+                    <label class="form-check-label" for="other">
+                      Other
+                    </label>
+                </div><br>
+                <div class="custom-control custom-checkbox">
+                    <p for="checkbox"> You are User or Admin</p> 
+                    <input type="checkbox" class="custom-control-input" name="userType" id="User" value="User" >
+                    <label class="custom-control-label" for="User">User</label>
+                    <input type="checkbox" class="custom-control-input" name="userType" id="Admin" value="Admin">
+                    <label class="custom-control-label" for="Admin">Admin</label>
+                </div>
+                <br>
+                <p>Select Country</p>
+                <select class="browser-default custom-select" id="myselect">
+                    <option >Open this select menu</option>
+                    <option value="USA">USA</option>
+                    <option value="India">India</option>
+                    <option value="UK">UK</option>
+                  </select>
+                  <br>
+                  <input type="submit" class="btn btn-success text-center">
+                 
+      </form>  
+    </div> 
+    </div>
+    
+<!-- user details -->
+
+</div>
+<p id="dtl"></p>
+<table id="users">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>UserType</th>
+        <th>Country</th>
+        <!-- <th>Edit</th>
+        <th>Delete</th>  -->
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<script src="app.js"></script>
+</body>
+</html>
